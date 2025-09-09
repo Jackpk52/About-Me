@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MK brothers Official</title>
+  <meta name="description" content="MK brothers Official — projects, showcase, overview and contact." />
+  <style>
+    /* ===== Dynamic Gradient Background ===== */
+    :root {
+      --card-bg: rgba(255,255,255,0.06);
+      --accent: #00d1b2;
+      --muted: rgba(255,255,255,0.75);
+      --glass: rgba(255,255,255,0.04);
+    }
+    * { box-sizing: border-box; }
+    html,body { height: 100%; margin: 0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; color: white; }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(120deg,#ff7a7a,#7a8bff,#4fd3c4,#ffd86b);
+      background-size: 400% 400%;
+      animation: gradientShift 14s ease infinite;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding: 3rem 1rem;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      25% { background-position: 50% 100%; }
+      50% { background-position: 100% 50%; }
+      75% { background-position: 50% 0%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    header {
+      text-align: left;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo {
+      width: 72px;
+      height: 72px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.03));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 20px;
+      color: black;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: -0.4px;
+    }
+
+    .tag {
+      color: var(--muted);
+      margin-top: 6px;
+      font-size: 14px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 20px;
+      align-items: start;
+    }
+
+    /* Left column content cards */
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .section-title {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .overview p { margin: 12px 0 0 0; color: rgba(255,255,255,0.95); line-height:1.5; }
+
+    .showcase-grid {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .project {
+      background: var(--glass);
+      padding: 12px;
+      border-radius: 10px;
+      min-height: 88px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .project h3 { margin: 0; font-size: 15px; }
+    .project p { margin: 8px 0 0 0; font-size:13px; color: rgba(255,255,255,0.85); }
+
+    .project a {
+      margin-top: 8px;
+      font-size:13px;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .project a:hover { text-decoration: underline; }
+
+    /* Right column (sidebar) */
+    aside {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .skills ul { list-style: none; padding: 0; margin: 10px 0 0 0; display:grid; gap:8px; }
+    .skills li { background: rgba(0,0,0,0.2); padding:8px 10px; border-radius:8px; font-size:14px; color: #fff; }
+
+    .contact a { color: var(--accent); text-decoration:none; display:block; margin-top:8px; }
+    .contact a:hover { text-decoration:underline; }
+
+    footer {
+      margin-top: 20px;
+      text-align:center;
+      color: rgba(255,255,255,0.85);
+      font-size: 13px;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      main { grid-template-columns: 1fr; }
+      header { justify-content: center; text-align: center; flex-direction: column; align-items: center; }
+      .logo { width:64px; height:64px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div style="display:flex;align-items:center;gap:12px">
+        <div class="logo">MK</div>
+        <div>
+          <h1>MK brothers Official</h1>
+          <div class="tag">Official portfolio • Projects • Showcase • Contact</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Left column -->
+      <div>
+        <!-- Overview -->
+        <section class="card overview">
+          <div class="section-title"><h2>Overview</h2></div>
+          <p>
+            MK brothers Official is the home for our projects and showcases. We build web apps, lightweight games, tools
+            and creative digital projects optimized for the web and GitHub Pages. Below you’ll find recent work, a quick
+            overview of skills and how to reach us.
+          </p>
+        </section>
+
+        <!-- Showcase -->
+        <section class="card" style="margin-top:14px;">
+          <div class="section-title"><h2>Works & Showcase</h2></div>
+
+          <div class="showcase-grid" id="showcase">
+            <!-- Project cards (replace links & descriptions as needed) -->
+            <div class="project">
+              <div>
+                <h3>Web Game Launcher</h3>
+                <p>10-in-1 browser game launcher with instant play and responsive UI. GitHub Pages ready.</p>
+              </div>
+              <a href="https://your-username.github.io/WebsiteGameLauncher" target="_blank" rel="noopener">Open project →</a>
+            </div>
+
+            <div class="project">
+              <div>
+                <h3>Retro Arcade Pack</h3>
+                <p>Collection of small, fast JavaScript games (Tetris, Pong, Snake, Breakout).</p>
+              </div>
+              <a href="#" target="_blank" rel="noopener">Demo →</a>
+            </div>
+
+            <div class="project">
+              <div>
+                <h3>Toolset: HEOX MT</h3>
+                <p>Desktop multitool concepts and terminal utilities packaged as a lightweight UI demo.</p>
+              </div>
+              <a href="#" target="_blank" rel="noopener">Details →</a>
+            </div>
+
+            <div class="project">
+              <div>
+                <h3>Order Bot</h3>
+                <p>Discord order management bot with slash commands, logs and role alerts.</p>
+              </div>
+              <a href="#" target="_blank" rel="noopener">Repo →</a>
+            </div>
+
+            <div class="project">
+              <div>
+                <h3>Custom Launcher UI</h3>
+                <p>Modular HTML/JS launcher with dynamic themes and game slot system.</p>
+              </div>
+              <a href="#" target="_blank" rel="noopener">View →</a>
+            </div>
+
+            <div class="project">
+              <div>
+                <h3>More Projects</h3>
+                <p>Plugins, small utilities and creative experiments — more added regularly.</p>
+              </div>
+              <a href="#" target="_blank" rel="noopener">Browse →</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Notes / call to action -->
+        <section class="card" style="margin-top:14px;">
+          <div class="section-title"><h2>Quick Notes</h2></div>
+          <p>
+            Want something custom — a launcher, game port or deployment to Pages? Contact us and we’ll spin up a working demo.
+            Replace the demo links above with your actual live links for direct access from this page.
+          </p>
+        </section>
+      </div>
+
+      <!-- Right column (sidebar) -->
+      <aside>
+        <section class="card skills">
+          <div class="section-title"><h2>Skills</h2></div>
+          <ul>
+            <li>Web: HTML, CSS, JavaScript</li>
+            <li>WebAssembly (wasm) integration</li>
+            <li>Node.js / tooling / Git</li>
+            <li>Game Dev: casual & retro games</li>
+            <li>Deployment: GitHub Pages</li>
+          </ul>
+        </section>
+
+        <section class="card contact">
+          <div class="section-title"><h2>Contact</h2></div>
+          <div>
+            <strong>Email</strong>
+            <div><a href="mailto:you@example.com">you@example.com</a></div>
+
+            <strong style="margin-top:10px; display:block;">Social</strong>
+            <div>
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <div><a href="https://twitter.com/yourhandle" target="_blank" rel="noopener">Twitter</a></div>
+
+            <strong style="margin-top:10px; display:block;">Hire / Collab</strong>
+            <div style="margin-top:6px;">Available for short contracts & builds. <a href="mailto:you@example.com">Get in touch</a>.</div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="section-title"><h2>Meta</h2></div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.9);">
+            Version: 1.0<br>
+            Updated: 2025<br>
+            License: MIT
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      &copy; <strong>All Rights Reserved - MK brothers Official</strong> 
+    </footer>
+  </div>
+</body>
+</html>
