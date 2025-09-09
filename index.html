@@ -20,9 +20,9 @@
 
     /* Dynamic gradient background animation */
     body {
-      background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #fdbb2d, #2193b0);
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #000000);
       background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
+      animation: gradientBG 12s ease infinite;
     }
 
     @keyframes gradientBG {
@@ -37,29 +37,46 @@
     }
 
     header h1 {
-      font-size: 2.5rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      font-size: 3rem;
       font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
     }
 
     header p {
       font-size: 1.2rem;
+      opacity: 0.8;
       margin-top: 0.5rem;
-      opacity: 0.9;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff5733;
     }
 
     section {
       max-width: 1000px;
-      margin: 2rem auto;
+      margin: 3rem auto;
       padding: 1rem;
     }
 
     h2 {
+      font-size: 1.8rem;
       margin-bottom: 1rem;
-      border-bottom: 2px solid rgba(255,255,255,0.3);
-      display: inline-block;
-      padding-bottom: 0.3rem;
+      border-left: 5px solid #ffd700;
+      padding-left: 10px;
     }
 
     .showcase {
@@ -70,65 +87,82 @@
     }
 
     .card {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 1.2rem;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
+      background: rgba(0,0,0,0.6);
+      padding: 1.5rem;
+      border-radius: 12px;
+      transition: transform 0.3s ease, background 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      background: rgba(0,0,0,0.8);
     }
 
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.6);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>MK Brothers Official</h1>
-    <p>Welcome to my personal showcase & overview</p>
+    <p>Showcasing Projects • Works • Overview</p>
   </header>
 
-  <section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#works">Works</a>
+    <a href="#overview">Overview</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
     <h2>About Me</h2>
     <p>
-      Hi! This site is where I showcase my works, projects, and skills.  
-      I love experimenting with web technologies, making tools, and building creative projects.
+      Welcome to <strong>MK Brothers Official</strong>.  
+      This is the home for all my projects, works, and experiments.  
+      I focus on building creative tools, websites, Discord bots, and fun apps.
     </p>
   </section>
 
-  <section>
+  <section id="works">
     <h2>My Works</h2>
     <div class="showcase">
       <div class="card">
         <h3>🎮 Game Launcher</h3>
-        <p>A 10-game launcher built with WebAssembly and hosted on GitHub Pages.</p>
+        <p>A 10-game launcher built using WebAssembly and fully hosted on GitHub Pages.</p>
       </div>
       <div class="card">
         <h3>💻 Tools</h3>
-        <p>Created multiple desktop apps, Discord bots, and utilities for productivity.</p>
+        <p>From desktop apps to Discord utilities, I develop multipurpose tools that solve real problems.</p>
       </div>
       <div class="card">
         <h3>🌐 Websites</h3>
-        <p>Developed custom websites with dynamic designs and modern UI/UX.</p>
+        <p>Created sleek and dynamic portfolio sites with modern UI and responsive design.</p>
       </div>
     </div>
   </section>
 
-  <section>
+  <section id="overview">
     <h2>Overview</h2>
     <p>
-      🔹 Skilled in web development, JavaScript, Node.js, and Python. <br>
-      🔹 Experience with GitHub Pages and project hosting. <br>
-      🔹 Focused on creativity, simplicity, and efficiency.
+      🔹 Skilled in HTML, CSS, JavaScript, Node.js, Python. <br>
+      🔹 Experienced in GitHub Pages hosting & project deployment. <br>
+      🔹 Passionate about game dev, web design, and automation.
     </p>
   </section>
 
-  <section>
+  <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:thatonebirdguy52@gmail.com">thatonebirdguy52@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/Jackpk52" target="_blank">github.com/Jackpk52</a></p>
